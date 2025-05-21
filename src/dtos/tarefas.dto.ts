@@ -1,4 +1,5 @@
-import { IsNotEmpty, IsString } from "class-validator";
+import { IsEnum, IsNotEmpty, IsString } from "class-validator";
+import { TarefasEnum } from "src/enums/tarefas.enum";
 
 export class TarefaDto {
     
@@ -11,6 +12,6 @@ export class TarefaDto {
     readonly descricao: String;
     
     @IsNotEmpty()
-    @IsString()
-    readonly status: String;
+    @IsEnum(TarefasEnum)
+    readonly status: TarefasEnum;
 }
