@@ -5,9 +5,9 @@ export interface Tarefa extends Document{
     
     readonly _id:mongoose.Schema.Types.ObjectId,
     
-    readonly  titulo: String,
+    readonly  titulo: string,
 
-    readonly descricao: String,
+    readonly descricao: string,
     
-    readonly status: String,
+    readonly status: string,
 }

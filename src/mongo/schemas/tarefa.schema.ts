@@ -3,9 +3,9 @@ import { Schema } from "mongoose";
 
 export const TarefaSchema = new Schema({
     
-    titulo: String,
+    titulo: {type: String,required: true},
 
-    descricao: String,
+    descricao:{type: String,required: true},
     
-    status: String,
+    status: {type: String,required: true},
 })
