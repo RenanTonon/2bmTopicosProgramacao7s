@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable } from "@nestjs/common";
-import { TarefaDto } from "src/dtos/tarefas.dto";
-import { Tarefa } from "src/mongo/interfaces/tarefa.interface";
-import { TarefasRepository } from "src/mongo/repositories/tarefas.repository";
+import { TarefaDto } from "src/tarefas/dtos/tarefas.dto";
+import { Tarefa } from "src/tarefas/mongo/interfaces/tarefa.interface";
+import { TarefasRepository } from "src/tarefas/mongo/respositories/tarefas.repository";
 
 @Injectable()
 export class TarefasServices{

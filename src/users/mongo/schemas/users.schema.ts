@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
-import { Role } from "src/roles/roles.enum";
+import { Role } from "src/auth/roles/roles.enum";
 
 
 export const UserSchema = new Schema({

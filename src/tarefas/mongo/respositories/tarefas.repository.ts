@@ -2,7 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { Tarefa } from "../interfaces/tarefa.interface";
-import { TarefaDto } from "src/dtos/tarefas.dto";
+import { TarefaDto } from "src/tarefas/dtos/tarefas.dto";
 
 @Injectable()
 export class TarefasRepository {

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcryptjs';
-import { UserRepository } from 'src/mongo/repositories/user.repository';
-import { Users } from 'src/mongo/interfaces/user.interface';
+import { UserRepository } from 'src/users/mongo/repositories/user.repository';
+import { Users } from 'src/users/mongo/interfaces/user.interface';
 
 @Injectable()
 export class UsersService {
