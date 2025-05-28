@@ -6,8 +6,9 @@ import { AuthController } from './auth.controller';
 import { JwtStrategy } from  '../jwt.strategy';
 import { UsersService } from 'src/users/services/users.services';
 import { UserRepository } from 'src/users/mongo/repositories/user.repository';
+import { UserSchema } from 'src/users/mongo/schemas/users.schema';
 import { MongooseModule } from '@nestjs/mongoose';
-import { TarefaSchema } from 'src/tarefas/mongo/schemas/tarefa.schema';
+
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { TarefaSchema } from 'src/tarefas/mongo/schemas/tarefa.schema';
       secret: 'SUA_CHAVE_SECRETA_AQUI', // em produção, use variável de ambiente
       signOptions: { expiresIn: '1h' },
     }),
-    
+    MongooseModule.forFeature([{name:'users', schema: UserSchema}])
   ],
   providers: [AuthService, JwtStrategy,UsersService,UserRepository],
   controllers: [AuthController],

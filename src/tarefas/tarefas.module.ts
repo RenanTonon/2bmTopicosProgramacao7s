@@ -14,4 +14,4 @@ import { TarefaSchema } from './mongo/schemas/tarefa.schema';
   controllers: [TarefasController],
   providers: [TarefasServices,TarefasRepository,],
 })
-export class AppModule {}
+export class TarefaModule {}
