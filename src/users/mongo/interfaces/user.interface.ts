@@ -10,5 +10,5 @@ export interface Users extends Document{
 
     readonly senha: string,
     
-    readonly role: Role,
+    readonly role: Role[],
 }

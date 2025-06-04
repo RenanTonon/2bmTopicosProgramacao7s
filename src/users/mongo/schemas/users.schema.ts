@@ -8,5 +8,5 @@ export const UserSchema = new Schema({
 
     senha: {type: String,required: true,},
     
-    role: {type: String,enum: Object.values(Role), default: Role.USER,required: true,},
+    role: {type: [String],enum: Object.values(Role), default: Role.USER,required: true,},
 })
