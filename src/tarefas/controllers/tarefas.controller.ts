@@ -23,6 +23,7 @@ export class TarefasController{
     }
 
     @Post()
+    @Roles(Role.ADMIN,Role.USER)
     @UsePipes(new ValidationPipe({ transform: true }))
     async createTarefa(@Body() newTarefa:TarefaDto ):Promise<Tarefa>{
         return await this.tarefaService.createTarefa(newTarefa)
