@@ -7,8 +7,9 @@ import { RolesGuard } from "src/auth/roles/roles.guard";
 import { TarefaDto } from "src/tarefas/dtos/tarefas.dto";
 import { Tarefa } from "src/tarefas/mongo/interfaces/tarefa.interface";
 import { TarefasServices } from "src/tarefas/services/tarefas.services";
+
+@UseGuards(AuthGuard('jwt'), RolesGuard)
 @Controller('tarefas')
-@UseGuards(RolesGuard)
 export class TarefasController{
     
     constructor(

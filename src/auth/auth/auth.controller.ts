@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Injectable } from '@nestjs/common';
+import { Body, Controller, Get, Injectable, Post } from '@nestjs/common';
 
 import { AuthService } from './auth.service';
 import { Users } from 'src/users/mongo/interfaces/user.interface';
@@ -10,7 +10,7 @@ export class AuthController {
         private readonly authService: AuthService
     ){}
 
-    @Get()
+    @Post()
     async getAcessoLogin(@Body() user:Users){
         return await this.authService.login(user);
     }

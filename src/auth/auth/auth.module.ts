@@ -14,7 +14,7 @@ import { MongooseModule } from '@nestjs/mongoose';
   imports: [
     PassportModule,
     JwtModule.register({
-      secret: 'SUA_CHAVE_SECRETA_AQUI', // em produção, use variável de ambiente
+      secret: 'SUA_CHAVE_SECRETA_AQUI', 
       signOptions: { expiresIn: '1h' },
     }),
     MongooseModule.forFeature([{name:'users', schema: UserSchema}])
